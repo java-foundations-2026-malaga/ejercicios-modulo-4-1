@@ -1,0 +1,63 @@
+name: Autocorrección
+
+# Se ejecuta cuando un alumno sube su rama (cualquier rama excepto main)
+# y también en los pull requests. Solo corrige las actividades que el alumno ha modificado.
+on:
+  push:
+    branches-ignore: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  detectar:
+    name: Detectar actividades modificadas
+    runs-on: ubuntu-latest
+    outputs:
+      actividades: ${{ steps.cambios.outputs.actividades }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: cambios
+        shell: bash
+        run: |
+          git fetch --no-tags origin main
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            dirs=$(ls -d actividad*/ | tr -d '/')
+          else
+            base=$(git merge-base origin/main HEAD)
+            dirs=$(git diff --name-only "$base" HEAD | grep -oE '^actividad[0-9]+' | sort -u || true)
+          fi
+          json=$(printf '%s\n' $dirs | grep -v '^$' | jq -R . | jq -cs .)
+          echo "Actividades a corregir: $json"
+          echo "actividades=$json" >> "$GITHUB_OUTPUT"
+
+  corregir:
+    name: ${{ matrix.actividad }}
+    needs: detectar
+    if: needs.detectar.outputs.actividades != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        actividad: ${{ fromJson(needs.detectar.outputs.actividades) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Compilar y ejecutar los tests
+        shell: bash
+        run: |
+          if mvn -B -q -f ${{ matrix.actividad }}/pom.xml test; then
+            echo "### ✅ ${{ matrix.actividad }}: APROBADA" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### ❌ ${{ matrix.actividad }}: revisa los errores de compilación o de los tests" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
