@@ -2,7 +2,7 @@
 
 ## Resuelve el cálculo de una cuenta de restaurante
 
-Calcula varios totales con campos tax, tip y calculateTotal(price).
+Crea la clase BillCalculator con campos `tax = 0.21` y `tip = 0.05` y el método `calculateTotal(double price)`, que devuelve `price * (1 + tax + tip)`. Calcula las cuentas de 100, 50 y 25.
 
 ## Objetivo
 
@@ -30,4 +30,5 @@ Cuenta 3: 31.5
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

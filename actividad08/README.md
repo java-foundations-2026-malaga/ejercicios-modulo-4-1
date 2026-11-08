@@ -2,7 +2,7 @@
 
 ## Crea una calculadora de propina sin argumentos
 
-Usa campos price, tax y tip en printTotal().
+Crea la clase TipCalculator con campos `price = 100`, `tax = 0.21` y `tip = 0.05` y un método `printTotal()` sin argumentos que muestre `price * (1 + tax + tip)`.
 
 ## Objetivo
 
@@ -28,4 +28,5 @@ Total: 126.0
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

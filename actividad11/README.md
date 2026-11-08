@@ -2,7 +2,7 @@
 
 ## Crea un método que devuelva un entero
 
-Implementa sum(int a, int b) y usa su valor retornado.
+Crea la clase Adder con el método `sum(int a, int b)`, que devuelve la suma. Llámalo con 4 y 5 y muestra el valor retornado.
 
 ## Objetivo
 
@@ -28,4 +28,5 @@ Suma: 9
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

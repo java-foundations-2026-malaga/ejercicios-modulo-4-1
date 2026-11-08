@@ -2,7 +2,7 @@
 
 ## Resuelve el caso de invitado sin cartera
 
-Reparte la cuenta del invitado entre las otras cinco personas sin repetir la fórmula del total.
+Seis personas consumen 50 cada una (impuesto 0.21 y propina 0.05). Un invitado no lleva cartera: reparte su cuenta entre las otras cinco personas. Crea al menos dos métodos que devuelvan double (por ejemplo, el total de una persona y el extra por persona) para no repetir la fórmula del total.
 
 ## Objetivo
 
@@ -30,4 +30,5 @@ Total general: 378.0
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

@@ -2,7 +2,7 @@
 
 ## Resuelve el reparto de una cuenta entre varias personas
 
-Calcula cuatro totales individuales y el total general.
+Usa un método `calculateTotal(double price)` (impuesto 0.21 y propina 0.05) para calcular lo que paga cada persona: Ana consume 20, Luis 30, Marta 40 y Pablo 50. Muestra también el total general.
 
 ## Objetivo
 
@@ -32,4 +32,5 @@ Total: 176.4
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

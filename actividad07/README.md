@@ -2,7 +2,7 @@
 
 ## Crea una clase con campos y un método que los imprima
 
-Crea Product con campos públicos name y price y printProduct().
+Crea la clase Product con campos públicos `name` (String) y `price` (double) y un método `printProduct()`. Desde `main`, crea un producto Teclado de 29.99 y muéstralo.
 
 ## Objetivo
 
@@ -29,4 +29,5 @@ Precio: 29.99
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

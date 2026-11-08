@@ -2,7 +2,7 @@
 
 ## Crea un método que devuelva un boolean
 
-Implementa isGreater(int a, int b).
+Crea la clase ComparatorTool con el método `isGreater(int a, int b)`, que devuelve si `a` es mayor que `b`. Llámalo con 10 y 3.
 
 ## Objetivo
 
@@ -28,4 +28,5 @@ Implementa isGreater(int a, int b).
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

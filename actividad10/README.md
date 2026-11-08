@@ -2,7 +2,7 @@
 
 ## Crea un método con dos argumentos
 
-Implementa printDivision(int x, double y).
+Crea la clase Divider con el método `printDivision(int x, double y)`, que muestra `x / y`. Llámalo desde `main` con 5 y 2.0.
 
 ## Objetivo
 
@@ -28,4 +28,5 @@ División: 2.5
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.
