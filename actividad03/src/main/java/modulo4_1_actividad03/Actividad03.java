@@ -7,6 +7,6 @@ public class Actividad03 {
 
         public static void main(String[] args) {
                 Actividad03 objeto = new Actividad03();
-                objeto saludar();
+                objeto.saludar();
         }
 }
