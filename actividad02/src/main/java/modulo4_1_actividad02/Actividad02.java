@@ -8,6 +8,6 @@ public class Actividad02 {
     }
 
     public static void main(String[] args) {
-        new Printer().printMsg();
+        new Printer().printMessage();
     }
 }
