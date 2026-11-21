@@ -6,6 +6,6 @@ public class Actividad05 {
     }
 
     public static void main(String[] args) {
-        calculate(2.5, 3);
+        calculate(3,2.5);
     }
 }
