@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="modulo4-1-actividad01" />
+        <module name="modulo4-1-actividad12" />
+        <module name="modulo4-1-actividad11" />
+        <module name="modulo4-1-actividad10" />
+        <module name="modulo4-1-actividad05" />
+        <module name="modulo4-1-actividad04" />
+        <module name="modulo4-1-actividad15" />
+        <module name="modulo4-1-actividad03" />
+        <module name="modulo4-1-actividad14" />
+        <module name="modulo4-1-actividad02" />
+        <module name="modulo4-1-actividad13" />
+        <module name="modulo4-1-actividad09" />
+        <module name="modulo4-1-actividad08" />
+        <module name="modulo4-1-actividad07" />
+        <module name="modulo4-1-actividad06" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

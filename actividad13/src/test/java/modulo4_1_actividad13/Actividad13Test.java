@@ -21,6 +21,7 @@ public class Actividad13Test {
     void pruebaSalidaEsperada() throws Exception {
         String salida = ejecutarMain();
         comprobarSalida("Cuenta 1: 126.0\nCuenta 2: 63.0\nCuenta 3: 31.5", salida);
+
     }
 
     @Test
